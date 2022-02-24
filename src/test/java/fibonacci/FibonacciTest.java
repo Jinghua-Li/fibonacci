@@ -36,4 +36,12 @@ class FibonacciTest {
         
         assertEquals(2, value);
     }
+    
+    @Test
+    void should_get_fibonacci_val_3_when_input_4() {
+        Fibonacci fibonacci = new Fibonacci(4);
+        int value = fibonacci.getFibonacci();
+        
+        assertEquals(3, value);
+    }
 }

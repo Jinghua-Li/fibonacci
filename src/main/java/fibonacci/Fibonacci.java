@@ -13,6 +13,6 @@ public class Fibonacci {
         if (index <= 2) {
             return 1;
         }
-        return 2;
+        return new Fibonacci(index - 1).getFibonacci() + new Fibonacci(index - 2).getFibonacci();
     }
 }
