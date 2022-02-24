@@ -2,6 +2,7 @@ package fibonacci;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class FibonacciTest {
@@ -38,5 +39,14 @@ class FibonacciTest {
         int value = Fibonacci.getFibonacci(4);
         
         assertEquals(3, value);
+    }
+    
+    @Test
+    void should_throw_exception_when_input_negative() {
+        IndexOutOfBoundsException exception = Assertions.assertThrows(IndexOutOfBoundsException.class, ()-> {
+            Fibonacci.getFibonacci(-1);
+        });
+        
+        assertEquals("The index cannot be negative!", exception.getMessage());
     }
 }
