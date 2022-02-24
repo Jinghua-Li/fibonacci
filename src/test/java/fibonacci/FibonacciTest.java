@@ -12,4 +12,12 @@ class FibonacciTest {
         
         assertEquals(0, value);
     }
+    
+    @Test
+    void should_get_fibonacci_val_1_when_input_1() {
+        Fibonacci fibonacci = new Fibonacci(1);
+        int value = fibonacci.getFibonacci();
+        
+        assertEquals(1, value);
+    }
 }
